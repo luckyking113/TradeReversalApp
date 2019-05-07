@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+import { HTTP } from '@ionic-native/http/ngx';
+import { JsonPipe } from '@angular/common';
 
-const loginInfo ={
-  username:'',
-  password:''
+var loginInfo = {
+  log:'',
+  pwd:'',
+  action:"aamlogin",
+  rememberme:0
 }
 
 @Component({
@@ -17,7 +22,7 @@ export class LoginPage implements OnInit {
   user = Array();
   TxtForValidation:string;
 
-  constructor() { 
+  constructor(private http: HTTP) { 
     this.TxtForValidation = "Invalid Username or Email Address";
     this.username="";
     this.password="";
@@ -32,20 +37,32 @@ export class LoginPage implements OnInit {
   }
 
   getUserInfoFromStroage () {
-    console.log("local storage");
+    // console.log("local storage");
+    
   }
 
   userAuth(){
-
+    console.log(loginInfo);
+    
+    this.http.post('https://www.tradereversal.com/chat/check_login.php', loginInfo, {
+      'Access-Control-Allow-Origin' : '*',
+      'Access-Control-Allow-Methods' : 'POST, GET, OPTIONS, PUT',
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }).then((response) => {
+          console.log(response);
+      });
   }
 
   userValidation(){    
     if((this.username.length < 1)|| (this.password.length < 1)){
-     this.addValidAnimation();
-      
+     this.addValidAnimation();      
     } else { 
       this.removeValidAnimation();
-      this.userAuth()
+      loginInfo.log=this.username;
+      loginInfo.pwd=this.password;
+      
+      this.userAuth();
     }
   }
 

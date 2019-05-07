@@ -1,0 +1,7 @@
+{
+  "name": "TradeReversalApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

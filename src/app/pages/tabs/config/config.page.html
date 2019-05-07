@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Setting</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Free Alerts (Non Member)</ion-label>
+      <ion-row>
+        <ion-item>
+          <ion-label>Push notification</ion-label>
+          <ion-toggle [(ngModel)]="data.pushnotification" color="success"></ion-toggle>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Chat messages</ion-label>
+    </ion-row>
+
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-list-header>Single Selection</ion-list-header>
+      <ion-list class="listrow">      
+        <ion-item>
+          <ion-label>Resolution</ion-label>
+          <!-- <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One"> -->
+          <ion-select interface="popover" placeholder="Select One">
+            <ion-select-option value="resolution160">160 x 120</ion-select-option>
+            <ion-select-option value="resolution320">320 x 240</ion-select-option>
+            <ion-select-option value="resolution640">640 x 360</ion-select-option>
+            <ion-select-option value="resolution8480">848 x 480</ion-select-option>
+            <ion-select-option value="resolution1200">1280 x 720</ion-select-option>
+            <ion-select-option value="resolution19200">1920 x 1080</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>  
+      <ion-list>      
+        <ion-item>
+          <ion-label>Frame</ion-label>
+          <!-- <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One"> -->
+          <ion-select interface="popover" placeholder="Select One">
+            <ion-select-option value="lframe">15</ion-select-option>
+            <ion-select-option value="Wframe">30</ion-select-option>    
+          </ion-select>
+        </ion-item>
+      </ion-list>     
+    </ion-row>
+
+
+
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Text chat</ion-label>
+      <ion-row>
+        <ion-item>
+          <ion-label>Turn notifications</ion-label>
+          <ion-toggle [(ngModel)]="data.txtnotification" color="success"></ion-toggle>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Commentary</ion-label>
+      <ion-row>
+        <ion-item>
+          <ion-label>Turn notifications</ion-label>
+          <ion-toggle [(ngModel)]="data.commentary" color="success"></ion-toggle>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Open Trades</ion-label>
+      <ion-row>
+        <ion-item>
+          <ion-label>Turn notifications</ion-label>
+          <ion-toggle [(ngModel)]="data.tradenotification" color="success"></ion-toggle>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Alerts</ion-label>
+      <ion-row>
+        <ion-item>
+          <ion-label>Turn notifications</ion-label>
+          <ion-toggle [(ngModel)]="data.alertnotification" color="success"></ion-toggle>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+    <ion-row class="settingform" style="margin-top: 3%">
+      <ion-label>Watch list</ion-label>
+      <ion-row>
+        <ion-item>
+          <ion-label>Turn notifications</ion-label>
+          <ion-toggle [(ngModel)]="data.watchnotification" color="success"></ion-toggle>
+        </ion-item>
+      </ion-row>
+    </ion-row>
+  </ion-grid>
+</ion-content>

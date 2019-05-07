@@ -1,0 +1,59 @@
+.new-background-color{
+    --background: #0cc55f;
+}
+
+ion-menu-button {
+    color: white;
+}
+
+ion-title {
+    color: white;
+}
+
+.settingform {
+    background-color: #F5F5F5;          
+    padding:0px 4px 4px;   
+    box-shadow: 2px 2px rgba(155, 151, 151, 0.4); 
+}
+
+.settingform ion-label {
+    margin-left:4%;
+    margin-top: 5%;
+    margin-bottom:3%;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba($color: black, $alpha: 0.7);
+    font-weight: 700;
+}
+
+.settingform ion-item ion-label{
+    color: rgba($color: black, $alpha: 0.6);
+    font-weight: 100;
+}
+
+.settingform ion-list {
+    width: 100%;   
+}
+
+.listrow {
+    border-bottom: 2px solid rgba($color: black, $alpha: 0.1)
+}
+
+ion-row {    
+    border-radius: 7px;     
+    width: 100%;  
+}
+
+.settingform ion-row{
+    background-color: white;   
+    border-radius: 0px;
+    padding: 4% 0%;
+}
+
+ion-item{
+    width: 100%;
+    outline: none;
+    --border-style:none;
+}
+
+

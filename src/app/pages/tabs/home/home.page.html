@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-img width="100%" height="auto" src="assets/logo.png"></ion-img>
+    </ion-row>
+    <ion-row class="homeBtnLayour">
+      <ion-button color="light" routerLink="/menu/home/tabs/chat">
+        <ion-col size="1">
+          <ion-icon name="md-chatbubbles"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          Chat Page
+        </ion-col>
+      </ion-button>
+
+      <ion-button color="light" routerLink="/menu/home/tabs/about">
+        <ion-col size="1">
+          <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          About US
+        </ion-col>
+      </ion-button>
+
+      <ion-button  color="light" routerLink="/menu/home/tabs/config">
+        <ion-col size="1">
+          <ion-icon ios="ios-settings" md="md-settings"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          Setting
+        </ion-col>
+      </ion-button>
+
+      <ion-button color="light" routerLink="/menu/home/tabs/login">
+        <ion-col size="1">
+          <ion-icon ios="ios-person" md="md-person"></ion-icon>
+        </ion-col>
+        <ion-col size="11">
+          Login
+        </ion-col>
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

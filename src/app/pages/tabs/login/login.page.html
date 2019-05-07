@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="new-background-color">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row class="loginform" style="margin-top: 3%">
+      <ion-label>Login</ion-label>
+      <ion-row class="emailAuth"> 
+        <ion-text class="loginAuth hiddenTxt blink"><ion-icon ios="ios-warning" md="md-warning"></ion-icon>{{TxtForValidation}}</ion-text>
+      </ion-row>
+      <ion-row> 
+        <ion-input class="emailValid" type="email" placeholder="Username or Email Address" [(ngModel)]="username"></ion-input>             
+      </ion-row>
+      <ion-row> 
+        <ion-input class="pwdValid" type="password" placeholder="Password" [(ngModel)]="password"></ion-input>                     
+      </ion-row>
+      <ion-row>
+        <ion-button color="success" (click)="login()">Login</ion-button>
+      </ion-row>
+    </ion-row>
+    <ion-row class="loginform formpanelpadding">
+        <ion-label>Coupon</ion-label>
+        <ion-row> 
+          <ion-input type="email" placeholder="Coupon Code"></ion-input>             
+        </ion-row>   
+        <ion-row>
+          <ion-button color="success">Pass with Coupon</ion-button>
+        </ion-row>
+      </ion-row>
+  </ion-grid>
+
+</ion-content>
